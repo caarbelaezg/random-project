@@ -1,5 +1,7 @@
 .loginPage {
+  position: relative;
   display: flex;
+  padding: 0 25px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -41,9 +43,30 @@
   justify-content: center;
 }
 
+.loginPage__footer {
+  border-top: 1px solid gray;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+
+.loginPage__footer-list {
+  margin-top: 10px;
+  font-size: 0.83rem;
+}
+
+.loginPage__footer-list-item {
+  margin-top: 5px;
+}
+
+.loginPage__footer-link {
+  color: rgb(33, 53, 71);
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   .loginPage {
     flex-direction: row;
+    padding: 0;
   }
 
   .loginPage > * {
@@ -52,5 +75,29 @@
 
   .loginPage__sectionA {
     height: 100vh;
+  }
+
+  .loginPage__footer {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 46%;
+
+  }
+  
+  .loginPage__footer-list {
+    margin-top: 10px;
+    font-size: 0.83rem;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .loginPage__footer-list-item {
+    margin-top: 5px;
+  }
+  
+  .loginPage__footer-link {
+    color: rgb(33, 53, 71);
+    cursor: pointer;
   }
 }

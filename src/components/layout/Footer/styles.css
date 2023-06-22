@@ -1,0 +1,10 @@
+.footer {
+  height: 300px;
+  display: flex;
+  background: rgb(204, 141, 210);
+  background: linear-gradient(
+    0deg,
+    rgba(204, 141, 210, 0.6573004201680672) 44%,
+    rgba(227, 176, 233, 0.11388305322128855) 100%
+  );
+}
