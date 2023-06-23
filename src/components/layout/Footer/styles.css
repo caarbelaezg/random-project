@@ -1,10 +1,135 @@
 .footer {
-  height: 300px;
-  display: flex;
-  background: rgb(204, 141, 210);
-  background: linear-gradient(
-    0deg,
-    rgba(204, 141, 210, 0.6573004201680672) 44%,
-    rgba(227, 176, 233, 0.11388305322128855) 100%
-  );
+  position: relative;
+  display: block;
 }
+
+.footer__sections {
+  display: grid;
+  padding: 0 20px;
+  background-color: rgb(227, 206, 228);
+  padding-bottom: 50px;
+}
+
+.footer__subscribe {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: stretch;
+  border: 2px solid rgba(184, 151, 184, 1);
+  border-radius: 15px;
+}
+
+.footer__title {
+  margin-bottom: 15px;
+}
+
+.footer__description {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.footer__input-mail {
+  flex: 1;
+  padding: 15px;
+  height: 39px;
+  border: none;
+  border-radius: 15px 0 0 15px;
+  border-right: 2px solid rgba(184, 151, 184, 1);
+}
+
+.footer__cta-subscribe {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 0.83rem;
+  outline: unset;
+  background-color: rgb(228, 198, 228);
+  transition: background-color 0.5s ease;
+}
+
+.footer__cta-subscribe:hover {
+  background-color: rgb(237, 215, 237);
+  outline: unset;
+}
+
+.footer__bg-img {
+  height: 150px;
+  width: 100%;
+  background: url(../../../assets/footer.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.footer__links {
+  border-top: 1px solid rgb(213, 181, 223);
+  padding-top: 25px;
+  margin-top: 60px;
+}
+
+.footer__list-item {
+  margin-top: 8px;
+}
+
+.footer__link {
+  font-size: 0.83rem;
+  color: rgb(33, 53, 71);
+  cursor: pointer;
+}
+
+.footer__resources {
+  margin-top: 20px;
+  display: flex;
+flex-direction: column;
+  gap: 50px;
+}
+
+.footer__resources li:not(:first-child) {
+  margin-top: 10px;
+}
+
+.footer__resources a {
+  font-size: 0.83rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__sections {
+    padding: 0 150px;
+    padding-bottom: 50px;
+  }
+
+  .footer__sections {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px
+  }
+
+  .footer__links {
+    grid-column: 1/-1;
+  }
+  
+  .footer__list-item {
+    margin-top: 0;
+    display: flex;
+  }
+
+  .footer__links-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer__resources {
+    flex-flow: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__resources {
+    justify-content: space-around;
+  }
+}
+
